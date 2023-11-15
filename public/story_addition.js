@@ -6,9 +6,10 @@ function generateProblem() {
         num2 = Math.floor(Math.random() * 10) + 1;
         correctAnswer = num1 + num2;
 
-        document.getElementById('problem').textContent = `Patty has ${num1} bananas and Timmy has ${num2} apples. How many fruits are there in total?`;
+        document.getElementById('problem-story').textContent = `Patty has ${num1} bananas and Timmy has ${num2} apples. How many fruits are there in total?`;
         document.getElementById('answer').value = '';
-        document.getElementById('result').textContent = '';
+        document.getElementById('feedback').textContent = '';
+
     }
     else {
         endGame();
@@ -25,7 +26,7 @@ function checkAnswer() {
         generateProblem();
     } 
     else {
-        document.getElementById('result').textContent = 'Try again';
+        document.getElementById('feedback').textContent = 'Your answer is incorrect. Please try again.';
     }
 }
 

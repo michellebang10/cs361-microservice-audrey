@@ -6,7 +6,7 @@ function generateProblem() {
         num2 = Math.floor(Math.random() * num1) + 1;
         correctAnswer = num1 - num2;
 
-        document.getElementById('problem').textContent = `Susie has ${num1} chocolates but gives Dan ${num2} of them. How many chocolates does she have now?`;
+        document.getElementById('problem-story').textContent = `Susie has ${num1} stickers but gives Dan ${num2} of them. How many does she have now?`;
         document.getElementById('answer').value = '';
         document.getElementById('result').textContent = '';
     }
@@ -25,7 +25,7 @@ function checkAnswer() {
         generateProblem();
     } 
     else {
-        document.getElementById('result').textContent = 'Try again';
+        document.getElementById('feedback').textContent = 'Your answer is incorrect. Please try again.';
     }
 }
 

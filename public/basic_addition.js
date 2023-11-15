@@ -22,7 +22,7 @@ function generateProblem() {
         document.getElementById('answer').value = userAnswers[currentProblem] || '';
         document.getElementById('result').textContent = '';
 
-        document.getElementById('previousButton').style.display = currentProblem > 0 ? 'inline' : 'none';
+        document.getElementById('previous-button').style.display = currentProblem > 0 ? 'inline' : 'none';
         document.getElementById('answer').disabled = false;
     } 
     else {
@@ -34,7 +34,7 @@ function checkAnswer() {
     if (problemCount < 10) {
         const userAnswer = parseInt(document.getElementById('answer').value);
 
-        userAnswers[currentProblem] = userAnswer; // Store the user's answer for this problem.
+        userAnswers[currentProblem] = userAnswer; 
 
         if (userAnswer === correctAnswer) {
             score++;
@@ -73,21 +73,36 @@ function endGame() {
     }
 
     document.getElementById('problem-container').style.display = 'none';
-    document.getElementById('previousButton').style.display = 'none';
-    document.getElementById('nextButton').style.display = 'none';
+    document.getElementById('navigation-container').style.display = 'none';
+    document.getElementById('previous-button').style.display = 'none';
+    document.getElementById('next-button').style.display = 'none';
+
+    document.getElementById('result').style.display = 'block';
     document.getElementById('result').textContent = `Final Score: ${finalScore}/10`;
     document.getElementById('answer').disabled = true;
 
+
     if (wrongAnswers.length > 0) {
-        const wrongProblems = document.createElement('p');
-        wrongProblems.textContent = 'Problems you got wrong:';
-        document.body.appendChild(wrongProblems);
+        const wrongProblemsContainer = document.createElement('div');
+        wrongProblemsContainer.id = 'wrong-problems-container'; 
+      
+        const wrongProblemsHeading = document.createElement('h3');
+        wrongProblemsHeading.textContent = 'Problems you got wrong:';
+        wrongProblemsContainer.appendChild(wrongProblemsHeading);
+
+       const wrongProblemsList = document.createElement('p');
+        wrongProblemsContainer.appendChild(wrongProblemsList);
+      
         for (let i = 0; i < wrongAnswers.length; i++) {
-            const wrongProblem = document.createElement('p');
-            wrongProblem.textContent = wrongAnswers[i];
-            document.body.appendChild(wrongProblem);
+          const wrongProblem = document.createElement('p');
+          wrongProblem.textContent = wrongAnswers[i];
+          wrongProblemsContainer.appendChild(wrongProblem);
         }
+      
+        document.body.appendChild(wrongProblemsContainer);
     }
+
+    document.getElementById('result').textContent = `Final Score: ${score}/10`;
 }
 
 window.onload = function () {

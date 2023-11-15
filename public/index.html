@@ -2,20 +2,31 @@
 <html>
   <head>
     <title>Math More</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/style.css">
   </head>
 
   <body>
-    <h1>Welcome to Math More</h1>
-      <h2>addition +</h2>
-        <a href="/addition">basic mode</a>
-        <br>
-        <a href="/story-addition">story mode</a>
+    <div class="home-options">
+      <h1>Welcome to Math More</h1>
+      <div class="mode-section">
+        addition +
+        <button type="button" id="mode-button"><a href="/addition">B</a></button>
+        <button type="button" id="mode-button"><a href="/story-addition">S</a></button>
 
-      <h2>subtraction -</h2>
-        <a href="/subtraction">basic mode</a>
-        <br>
-        <a href="/story-subtraction">story mode</a>
+      </div>
+    
+      <div class="mode-section">
+        subtraction -</h2>
+        <button type="button" id="mode-button"><a href="/subtraction">B</a></button>
+        <button type="button" id="mode-button"><a href="/story-subtraction">S</a></button>
+        </div>
+      </div>
+    </div>
+    
+</div>
 
-    <h2><a href="/help">Help</a></h2>
+    
+    <button type="button" id="help-button"><a href="/help"><i class="fas fa-question"></i></a></button>
   </body>
 </html>

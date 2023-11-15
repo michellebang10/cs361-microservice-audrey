@@ -2,21 +2,24 @@
 <html>
   <head>
     <title>Basic Subtraction - Math More</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/style.css">
     <script src="./public/story_subtraction.js"></script>
   </head>
 
   <body>
-    <h1>Story Subtraction Problems</h1>
     <div id="problem-container">
-    <p id="problem"></p>
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <button onclick="checkAnswer()">Check Answer</button>
+      <h1>Story Subtraction Problems</h1>
+      <p id="problem-story"></p>
+      <input type="text" id="answer" placeholder="Enter your answer">
+      <button onclick="checkAnswer()" id="check-button">Check Answer</button>
     </div>
 
-    <p id="result"></p>
+    <p id="result" style="display: none"></p>
+    <p id="feedback"></p>
     <p id="score">Score: 0/10</p>
 
-    <h2><a href="/">Home</a></h2>
-    <h2><a href="/help">Help</a></h2>
+    <button type="button" id="home-button"><a href="/"><i class="fas fa-home"></i></a></button>
+    <button type="button" id="help-button"><a href="/help"><i class="fas fa-question"></i></a></button>
   </body>
 </html>
