@@ -9,8 +9,14 @@ const server = http.createServer((req, res) => {
     case '/':
       filePath = './public/index.html';
       break;
-    case '/addition':
+    case '/easy_addition':
       filePath = './public/basic_addition.html';
+      break;
+    case '/med_addition':
+      filePath = './public/med_addition.html';
+      break;
+    case '/hard_addition':
+      filePath = './public/hard_addition.html';
       break;
     case '/subtraction':
       filePath = './public/basic_subtraction.html';

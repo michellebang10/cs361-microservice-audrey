@@ -1,5 +1,23 @@
 {
   "scripts": {
     "start": "node server.js"
+  },
+  "name": "cs-361",
+  "description": "**Partner:** Michelle Bang <br/>",
+  "version": "1.0.0",
+  "main": "microservice.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audreyau/CS-361.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/audreyau/CS-361/issues"
+  },
+  "homepage": "https://github.com/audreyau/CS-361#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
   }
 }
